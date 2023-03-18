@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+     void Awake() {
+        rb = GetComponent<Rigidbody2D>();    
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,4 +28,5 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
 }
